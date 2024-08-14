@@ -1,4 +1,4 @@
-#Sum upto n numbers
+# Sum upto n numbers
 
 
 def sum1(n): 
@@ -18,8 +18,13 @@ def sum2(n):
 
 
 t = int(input("Enter the number of test cases: ")) # Prompt the user to enter the number of test cases
+
+
 while t:
+
   n = int(input("Enter a number: ")) # Prompt the user to enter a number for each test case
+
   print("Result for sum1 {}".format(sum1(n)))
   print("Result for sum2 {}".format(sum2(n)))
+
   t -= 1
