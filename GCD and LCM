@@ -1,0 +1,27 @@
+# G.C.D and H.C.F
+
+def gcd(a, b):
+
+  # T.M = O(log(min(a, b)))
+
+  if a == 0:
+    return b
+  return gcd(b % a, a)
+
+
+def lcm(a, b):
+
+  # T.M = O(1)
+
+  return (a * b) // gcd(a, b)
+
+
+t = int(input("Enter the number of test cases")) # Prompt the user to enter the number of test cases
+
+while t:
+
+  a, b = map(int, input("Enter two numbers: ").split()) # Prompt the user to enter two numbers for each test case
+
+  print('The GCD is {} and the LCM is {} '.format(gcd(a, b), lcm(a, b)))
+
+  t -= 1
